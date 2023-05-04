@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  background-color: var(--bg-primary);
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1024px;
+    color: var(--text-white);
+  }
+
+  &-logo {
+    font-weight: 500;
+  }
+
+  &-btn {
+    margin-left: 20px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+  }
+}
