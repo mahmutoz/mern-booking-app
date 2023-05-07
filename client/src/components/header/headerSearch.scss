@@ -1,0 +1,109 @@
+.header {
+  &-search {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    width: 100%;
+    max-width: 1024px;
+    height: 50px;
+    bottom: -25px;
+    border-radius: 5px;
+    background-color: var(--bg-white);
+    border: 3px solid var(--text-warning);
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &-input {
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+      color: var(--text-gray-700);
+    }
+
+    &-text {
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: var(--text-gray-700);
+      cursor: pointer;
+    }
+
+    &-calendar {
+      position: absolute;
+      top: 50px;
+    }
+  }
+
+  &-close-btn {
+    position: absolute;
+    display: inline-block;
+    right: -35px;
+    width: 30px;
+    height: 30px;
+    line-height: 32px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--bg-secondary);
+    border-radius: 3px;
+
+    svg {
+      color: var(--text-white);
+      font-size: 18px;
+    }
+  }
+
+  &-icon {
+    color: var(--text-gray-300);
+  }
+}
+
+.options {
+  position: absolute;
+  top: 50px;
+  background-color: var(--bg-white);
+  color: var(--text-gray-600);
+  border-radius: 5px;
+  box-shadow: 0 0 10px -5px rgba(var(--text-dark-rgb), 0.4);
+
+  &-item {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 10px;
+  }
+
+  &-counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-gray-700);
+
+    &-text {
+      color: var(--text-gray-700);
+      font-weight: 600;
+    }
+
+    &-btn {
+      width: 30px;
+      height: 30px;
+      border: 1px solid var(--text-secondary);
+      background-color: var(--bg-white);
+      cursor: pointer;
+
+      &:disabled {
+        cursor: not-allowed;
+        border-color: var(--text-gray-400);
+      }
+    }
+  }
+}

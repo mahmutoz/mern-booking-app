@@ -1,7 +1,9 @@
 import React from "react"
 import "./Header.scss"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faBed, faCar, faPlane, faGifts, faTaxi } from "@fortawesome/free-solid-svg-icons"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faBed, faCar, faPlane, faGifts, faTaxi} from "@fortawesome/free-solid-svg-icons"
+
+import HeaderSearch from "@/components/header/HeaderSearch.jsx";
 
 const Header = () => {
   return (
@@ -9,23 +11,23 @@ const Header = () => {
       <div className="header-container">
         <ul className="header-list">
           <li className="header-list-item active">
-            <FontAwesomeIcon icon={faBed} />
+            <FontAwesomeIcon icon={faBed}/>
             <span>Stays</span>
           </li>
           <li className="header-list-item">
-            <FontAwesomeIcon icon={faPlane} />
+            <FontAwesomeIcon icon={faPlane}/>
             <span>Flights</span>
           </li>
           <li className="header-list-item">
-            <FontAwesomeIcon icon={faCar} />
+            <FontAwesomeIcon icon={faCar}/>
             <span>Car Rentals</span>
           </li>
           <li className="header-list-item">
-            <FontAwesomeIcon icon={faGifts} />
+            <FontAwesomeIcon icon={faGifts}/>
             <span>Attractions</span>
           </li>
           <li className="header-list-item">
-            <FontAwesomeIcon icon={faTaxi} />
+            <FontAwesomeIcon icon={faTaxi}/>
             <span>Airport Taxis</span>
           </li>
         </ul>
@@ -35,6 +37,7 @@ const Header = () => {
           stay.
         </p>
         <button className="header-btn">Log in / Register</button>
+        <HeaderSearch/>
       </div>
     </header>
   )
