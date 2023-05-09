@@ -5,10 +5,11 @@ import {faBed, faCar, faPlane, faGifts, faTaxi} from "@fortawesome/free-solid-sv
 
 import HeaderSearch from "@/components/header/HeaderSearch.jsx";
 
-const Header = () => {
+const Header = ({type}) => {
   return (
     <header className="header">
-      <div className="header-container">
+      <div className={type === 'list' ? 'header-container list-mode' : 'header-container'}>
+
         <ul className="header-list">
           <li className="header-list-item active">
             <FontAwesomeIcon icon={faBed}/>
@@ -31,13 +32,19 @@ const Header = () => {
             <span>Airport Taxis</span>
           </li>
         </ul>
-        <h1 className="header-title">Find Deals on Hotels, Homes, and Much More...</h1>
-        <p className="header-desc">
-          From cozy country homes to funky city apartments. Find the perfect place to
-          stay.
-        </p>
-        <button className="header-btn">Log in / Register</button>
-        <HeaderSearch/>
+        {
+          type !== "list" &&
+          <>
+            <h1 className="header-title">Find Deals on Hotels, Homes, and Much More...</h1>
+            <p className="header-desc">
+              From cozy country homes to funky city apartments. Find the perfect place to
+              stay.
+            </p>
+            <button className="header-btn">Log in / Register</button>
+
+            <HeaderSearch/>
+          </>
+        }
       </div>
     </header>
   )

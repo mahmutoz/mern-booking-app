@@ -12,6 +12,7 @@ module.exports = {
   // remove 'React' is defined but never used.(no-unused-vars) error
   rules: {
     'react-refresh/only-export-components': 'warn',
-    'no-unused-vars': ['error', {'varsIgnorePattern': '^React$'}]
+    'no-unused-vars': ['error', {'varsIgnorePattern': '^React$'}],
+    "react/prop-types": "off"
   },
 }
